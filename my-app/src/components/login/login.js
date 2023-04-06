@@ -25,7 +25,7 @@ const Login = ({ setLoginUser}) => {
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)
-            navigate("/")
+            navigate("/",{state:res.data.user.name})
         })
     }
 
